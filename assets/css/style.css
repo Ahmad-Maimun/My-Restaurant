@@ -15,6 +15,7 @@ body {
     color: var(--body-color);
     font-size: 1.125rem;
     line-height: 1.75rem;
+    overflow-x: hidden;
 }
 
 h1,
@@ -246,7 +247,7 @@ h4 {
         @media (max-width: 575.98px) {
             transform: translateX(0);
             &::before {
-                display: none;
+                display: none; 
             }
         }
     }
@@ -752,4 +753,61 @@ h4 {
             color: #ccc;
         }
     }   
+}
+/* ************************* Modal CSS ********************* */
+.food-cart-modal {
+    img {
+        width: 100px;
+
+    }
+    thead {
+        tr {
+            th {
+                background-color: var(--primary-color);
+                color: #fff;
+
+            }
+        }
+    }
+    tr {
+        td {
+            vertical-align: middle;
+        }
+        .quantity-area {
+            span {
+                margin-right: 5px;
+            }
+            .plus-minus {
+                li {
+                    width: 25px;
+                    height: 25px;
+                    border: 1px solid var(--primary-color);
+                    margin-left: 5px;
+                    border-radius: 50%;
+                    transition: all ease .3s;
+                    i {
+                        font-size: 14px;
+                        color: var(--primary-color);
+                        transition: all ease .3s;
+                    }
+                    &:hover {
+                        background-color: var(--primary-color);
+                        i {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .action {
+            cursor: pointer;
+            i {
+                color: var(--primary-color);
+            }
+        }
+    }
+    .btn-custom {
+        background-color: var(--primary-color);
+        color: #fff;
+    }
 }
