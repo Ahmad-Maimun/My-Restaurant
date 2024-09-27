@@ -358,6 +358,11 @@ h4 {
         border: 1px solid #ccc;
         border-radius: 10px;
         overflow: hidden;
+        img {
+            width: 360px;
+            height: 270px;
+            object-fit: cover;
+        }
         .overly {
             background-color: #fff;
             left: 0;
