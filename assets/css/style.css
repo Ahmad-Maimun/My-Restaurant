@@ -43,6 +43,49 @@ h4 {
         }
     }
 }
+/* Fixed Cart Btn */
+.fixed-cart-btn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 99;
+    padding: 20px 30px 10px 15px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid var(--primary-color);
+    background-color: #fff;
+    @media (max-width: 575.98px) {
+        padding: 10px 0 5px 7px;
+    }
+    .cart {
+        position: relative;
+        cursor: pointer;
+        @media (max-width: 767.98px) {
+            margin-right: 10px;
+            padding-right: 20px;
+        }
+        i {
+            font-size: 24px;
+            color: #000;
+        }
+        span {
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            color: #fff;
+            position: absolute;
+            font-size: 0.75rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            top: -11px;
+            left: 19px;
+            font-weight: 600;
+        }
+    }
+}
 /* Header */
 .header {
     position: absolute;
@@ -338,6 +381,11 @@ h4 {
             padding: 25px;
             border-radius: 10px;
             margin-top: 30px;
+            li.active {
+                pointer-events: none;
+                cursor: default;
+                opacity: .5;
+            }
             a {
                 color: var(--title-color);
                 text-decoration: none;
@@ -359,7 +407,6 @@ h4 {
         border-radius: 10px;
         overflow: hidden;
         img {
-            width: 360px;
             height: 270px;
             object-fit: cover;
         }
@@ -424,6 +471,15 @@ h4 {
                 font-size: 18px;
                 padding-left: 10px;
                 transition: all ease .3s;
+            }
+            &.active {
+                background-color: var(--primary-color);
+                pointer-events: none;
+                opacity: 0.6;
+                span,
+                i {
+                    color: #fff;
+                }
             }
             &:hover {
                 background-color: var(--primary-color);
@@ -749,7 +805,7 @@ h4 {
     .copyright {
         margin-top: 60px;
         background-color: #262525;
-        padding: 19px 0;
+        padding: 19px 10px;
         p {
             align-items: center;
             display: flex;

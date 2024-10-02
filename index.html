@@ -14,6 +14,15 @@
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
 </head>
 <body>
+    <div class="fixed-cart-btn">
+        <div class="cart" data-bs-toggle="modal" data-bs-target="#food-modal">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <span class="cart-item-count">10</span>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+        </div>
+    </div>
     <!-- Header Start -->
     <header class="header">
         <div class="container">
@@ -32,9 +41,9 @@
                 <div class="action order-2 order-lg-3 d-flex align-items-center">
                     <div class="cart" data-bs-toggle="modal" data-bs-target="#food-modal">
                         <i class="fa-solid fa-cart-arrow-down"></i>
-                        <span>10</span>
+                        <span class="cart-item-count">10</span>
                     </div>
-                    <div class="menu-toggle" id="menu-toggle">
+                    <div class="menu-toggle" id="menu">
                         <span></span>
                     </div>
                 </div>
@@ -316,132 +325,13 @@
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                        <img src="./assets/images/food-cart-1.png" alt="Image">
-                    </td>
-                    <td>
-                        <span class="table-title">Braised Chicken Legs</span>
-                    </td>
-                    <td>
-                        <span class="price">$12.00</span>
-                    </td>
-                    <td>
-                       <div class="quantity-area d-flex align-items-center">
-                        <span class="Quantity d-inline-block">1</span>
-                        <div class="plus-minus">
-                            <ul class="list-unstyled d-flex m-0">
-                                <li class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-minus"></i></li>
-                                <li class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-plus"></i></li>
-                            </ul>
-                        </div>
-                       </div>
-                    </td>
-                    <td>
-                        <span class="total">$12.00</span>
-                    </td>
-                    <td>
-                        <span class="action">
-                            <i class="fa-solid fa-trash"></i>
-                        </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                        <img src="./assets/images/food-cart-1.png" alt="Image">
-                    </td>
-                    <td>
-                        <span class="table-title">Braised Chicken Legs</span>
-                    </td>
-                    <td>
-                        <span class="price">$12.00</span>
-                    </td>
-                    <td>
-                       <div class="quantity-area d-flex align-items-center">
-                        <span class="Quantity d-inline-block">1</span>
-                        <div class="plus-minus">
-                            <ul class="list-unstyled d-flex m-0">
-                                <li class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-minus"></i></li>
-                                <li class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-plus"></i></li>
-                            </ul>
-                        </div>
-                       </div>
-                    </td>
-                    <td>
-                        <span class="total">$12.00</span>
-                    </td>
-                    <td>
-                        <span class="action">
-                            <i class="fa-solid fa-trash"></i>
-                        </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                        <img src="./assets/images/food-cart-1.png" alt="Image">
-                    </td>
-                    <td>
-                        <span class="table-title">Braised Chicken Legs</span>
-                    </td>
-                    <td>
-                        <span class="price">$12.00</span>
-                    </td>
-                    <td>
-                       <div class="quantity-area d-flex align-items-center">
-                        <span class="Quantity d-inline-block">1</span>
-                        <div class="plus-minus">
-                            <ul class="list-unstyled d-flex m-0">
-                                <li class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-minus"></i></li>
-                                <li class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-plus"></i></li>
-                            </ul>
-                        </div>
-                       </div>
-                    </td>
-                    <td>
-                        <span class="total">$12.00</span>
-                    </td>
-                    <td>
-                        <span class="action">
-                            <i class="fa-solid fa-trash"></i>
-                        </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                        <img src="./assets/images/food-cart-1.png" alt="Image">
-                    </td>
-                    <td>
-                        <span class="table-title">Braised Chicken Legs</span>
-                    </td>
-                    <td>
-                        <span class="price">$12.00</span>
-                    </td>
-                    <td>
-                       <div class="quantity-area d-flex align-items-center">
-                        <span class="Quantity d-inline-block">1</span>
-                        <div class="plus-minus">
-                            <ul class="list-unstyled d-flex m-0">
-                                <li class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-minus"></i></li>
-                                <li class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-plus"></i></li>
-                            </ul>
-                        </div>
-                       </div>
-                    </td>
-                    <td>
-                        <span class="total">$12.00</span>
-                    </td>
-                    <td>
-                        <span class="action">
-                            <i class="fa-solid fa-trash"></i>
-                        </span>
-                    </td>
-                  </tr>
+                <tbody id="cart_item_table">
+                  <!-- Empty -->
                 </tbody>
               </table>
           </div>
           <div class="total-count text-end">
-            <strong class="h2 text-dark">Total Amount: $27.00</strong>
+            <strong id="total-count" class="h2 text-dark">Total Amount: 0 TK</strong>
           </div>
         </div>
         <div class="modal-footer">
