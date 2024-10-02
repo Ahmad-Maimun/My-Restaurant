@@ -846,6 +846,7 @@ h4 {
                     margin-left: 5px;
                     border-radius: 50%;
                     transition: all ease .3s;
+                    cursor: pointer;
                     i {
                         font-size: 14px;
                         color: var(--primary-color);

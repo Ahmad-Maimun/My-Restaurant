@@ -52,11 +52,12 @@ async function specialCatagories() {
         let response = await fetch("https://course.divinecoder.com/food-categories")
         let data = await response.json()
         document.getElementById('menu-ul').innerHTML = "";
-        document.getElementById('menu-ul').innerHTML = data.map(item => `<li data-id="${item.id}" class="mb-3 mb-lg-0"><a href="#">${item.name}</a></li>`).join('');
+        document.getElementById('menu-ul').innerHTML = data.map(item => `<li data-id="${item.id}" class="mb-3 mb-xl-0"><a href="#">${item.name}</a></li>`).join('');
 
         foodItem()
     } catch (error) {
-
+        console.log(error);
+        
     }
     
 }
@@ -155,10 +156,10 @@ function appendCartItem() {
                         <img src="${food.image}" alt="Image">
                     </td>
                     <td>
-                        <span class="table-title">${food.name}</span>
+                        <span class="table-title flex-nowrap">${food.name}</span>
                     </td>
                     <td>
-                        <span class="price">TK: ${food.price}</span>
+                        <span class="price flex-nowrap">TK: ${food.price}</span>
                     </td>
                     <td>
                        <div class="quantity-area d-flex align-items-center">
@@ -172,7 +173,7 @@ function appendCartItem() {
                        </div>
                     </td>
                     <td>
-                        <span class="total">TK: ${food.total}</span>
+                        <span class="total d-block">TK: ${food.total}</span>
                     </td>
                     <td>
                         <span class="action">
